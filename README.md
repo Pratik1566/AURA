@@ -1,4 +1,4 @@
- # AURA — Local-First AI Assistant
+# AURA — Local-First AI Assistant
 
 **AURA** is a local-first AI assistant powered by Ollama and Qwen 3.5 4B. It connects a locally running AI model to Slack through a Node.js bridge, allowing users to interact with their own AI assistant by mentioning it in a Slack channel.
 
@@ -87,6 +87,20 @@ AURA is **local-first**, but it is not completely offline.
 - The bridge connects to Slack using Socket Mode.
 
 The current implementation does not require a paid hosted AI inference API.
+
+## Switch Integration
+
+AURA's integration with Switch has been explored as part of the project.
+
+The development work included:
+
+- Exploring the Switch Console architecture and local server.
+- Investigating the native custom-agent registration API.
+- Examining agent registration requirements and API schemas.
+- Connecting the Slack messaging app with Switch.
+- Investigating authentication requirements for agent registration.
+
+The initial integration exploration and Slack connectivity testing were performed. However, native custom-agent registration has not yet been successfully verified.
 
 ## Project Structure
 
@@ -224,7 +238,7 @@ The Slack bridge uses these environment variables:
 - CPU-only inference may be slower.
 - The current bridge processes individual messages without persistent conversation history.
 - Retrieval-Augmented Generation (RAG) is not currently implemented.
-- Native custom-agent registration with Switch has not yet been verified.
+- Native custom-agent registration with Switch remains unverified.
 
 ## Future Improvements
 
@@ -233,7 +247,7 @@ The Slack bridge uses these environment variables:
 - Improved response speed and model optimization.
 - More messaging platform integrations.
 - Better error handling and automated testing.
-- Verified native Switch agent integration.
+- Complete and validate native Switch agent registration.
 
 ## Project Goal
 
